@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #FDE5D4, #E3C6A5);
+    color: #4A2E2A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(to right, #8B5C49, #DE8F6E);
+    color: white;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Branding */
+.brand-name {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Creator Info */
+.creator-info {
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 500;
+    text-align: right;
+    min-width: 280px; 
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    flex-grow: 1;
+    margin: 80px 0 70px;  
+}
+
+/* Chat Messages */
+.message {
+    max-width: 75%;
+    padding: 12px 18px;
+    margin: 8px 0;
+    border-radius: 12px;
+    line-height: 1.6;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* User Message */
+.userMessage {
+    background-color: #FFDFDF;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: right;
+    align-self: flex-end;
+    font-weight: 600;
+    border-right: 4px solid #E57373;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Bot Message */
+.botMessage {
+    background-color: #DFF6FF;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    align-self: flex-start;
+    font-weight: 600;
+    border-left: 4px solid #64B5F6;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Input Area */
+.input-area {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 12px;
+    gap: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Fields */
+input[type="text"], input[type="file"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #F4E1D2;
+    color: #4A2E2A;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Buttons */
+button {
+    background: #8B5C49;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #6A3E32;
+}
+
+/* Scrollable Chat */
+.chat-container {
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+    padding-bottom: 50px;
+}
+
+/* Smooth Scrollbar */
+.chat-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: #8B5C49;
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
