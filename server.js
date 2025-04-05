@@ -50,4 +50,10 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
+    app.post('/upload', upload.single('file'), async (req, res) => {
+  console.log("Received file upload");
+  console.log("File:", req.file);
+  console.log("Body:", req.body);
+});
+
 });
