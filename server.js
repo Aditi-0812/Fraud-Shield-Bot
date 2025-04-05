@@ -49,6 +49,10 @@ app.post("/upload", upload.single("file"), async (req, res) => {
 });
 
 // Start server
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
