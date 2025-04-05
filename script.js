@@ -56,7 +56,7 @@ document.getElementById("fileUpload").addEventListener("change", async function(
     appendMessage(`📁 File uploaded: ${file.name}`, true);
 
     try {
-        const response = await fetch("http://localhost:5000/upload", {
+        const response = await fetch("https://fraud-shield-bot.onrender.com", {
             method: "POST",
             body: formData
         });
